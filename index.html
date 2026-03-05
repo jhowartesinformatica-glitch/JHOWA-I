@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
@@ -22,26 +23,13 @@ color:white;
 overflow-x:hidden;
 }
 
-/* FUNDO ANIMADO */
+/* CANVAS PARTÍCULAS */
 
-body::before{
-content:"";
+#particles{
 position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,#00aaff22,#000000);
-animation:movebg 15s linear infinite;
+width:100%;
+height:100%;
 z-index:-1;
-}
-
-@keyframes movebg{
-
-0%{transform:translate(0,0)}
-
-50%{transform:translate(-200px,-200px)}
-
-100%{transform:translate(0,0)}
-
 }
 
 /* MENU */
@@ -55,7 +43,6 @@ background:#050505;
 border-bottom:1px solid #111;
 position:sticky;
 top:0;
-z-index:10;
 }
 
 .logo{
@@ -103,12 +90,12 @@ max-width:700px;
 /* SEÇÕES */
 
 section{
-padding:110px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 h2{
-font-size:42px;
+font-size:40px;
 margin-bottom:60px;
 }
 
@@ -131,15 +118,6 @@ transition:0.4s;
 .card:hover{
 transform:translateY(-12px);
 border-color:#00aaff;
-background:#101010;
-}
-
-.card h3{
-margin-bottom:12px;
-}
-
-.card p{
-color:#aaa;
 }
 
 /* SOFTWARE */
@@ -162,12 +140,10 @@ border-radius:8px;
 text-decoration:none;
 color:white;
 font-weight:bold;
-transition:0.3s;
 }
 
 .download:hover{
 background:#0044aa;
-transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -185,6 +161,8 @@ border-top:1px solid #111;
 </head>
 
 <body>
+
+<canvas id="particles"></canvas>
 
 <nav>
 
@@ -205,8 +183,7 @@ JHOW A-I
 <h1>JHOW A-I TECHNOLOGY</h1>
 
 <p>
-Tecnologia avançada, inovação digital e desenvolvimento
-de sistemas inteligentes.
+Tecnologia avançada e desenvolvimento de sistemas inteligentes.
 </p>
 
 </div>
@@ -224,12 +201,12 @@ de sistemas inteligentes.
 
 <div class="card">
 <h3>Otimização de Windows</h3>
-<p>Melhoria de desempenho e limpeza profunda do sistema.</p>
+<p>Melhoria de desempenho e limpeza profunda.</p>
 </div>
 
 <div class="card">
 <h3>Desenvolvimento de Software</h3>
-<p>Criação de ferramentas e sistemas inteligentes.</p>
+<p>Ferramentas e sistemas inteligentes.</p>
 </div>
 
 </div>
@@ -245,7 +222,7 @@ de sistemas inteligentes.
 <h3>TITAN ULTRA PRO</h3>
 
 <p>
-Sistema inteligente de diagnóstico e otimização do Windows.
+Sistema inteligente de otimização e diagnóstico do Windows.
 </p>
 
 <a class="download" href="#">
@@ -261,6 +238,55 @@ Download em breve
 JHOW A-I TECHNOLOGY © 2026
 
 </footer>
+
+<script>
+
+const canvas = document.getElementById("particles")
+const ctx = canvas.getContext("2d")
+
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+let particles = []
+
+for(let i=0;i<80;i++){
+
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-0.5)*1,
+vy:(Math.random()-0.5)*1,
+size:2
+})
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+
+p.x+=p.vx
+p.y+=p.vy
+
+if(p.x<0||p.x>canvas.width)p.vx*=-1
+if(p.y<0||p.y>canvas.height)p.vy*=-1
+
+ctx.fillStyle="#00aaff"
+ctx.beginPath()
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
+ctx.fill()
+
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+</script>
 
 </body>
 </html>
