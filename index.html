@@ -19,6 +19,7 @@ margin:0;
 background:#050b14;
 color:white;
 font-family:Arial;
+overflow-x:hidden;
 }
 
 #particles-js{
@@ -28,121 +29,113 @@ height:100%;
 z-index:-1;
 }
 
-header{
+/* NAVBAR */
 
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:20px 60px;
-background:#00000090;
-
+background:#000000c7;
+backdrop-filter:blur(10px);
 }
 
 .logo{
-
 font-family:'Bebas Neue';
 font-size:40px;
 letter-spacing:3px;
 color:#2aa9ff;
-
 }
 
 nav a{
-
-margin-left:25px;
+margin-left:30px;
 text-decoration:none;
 color:white;
-
+font-size:18px;
+opacity:0.8;
 }
 
+/* HERO */
+
 .hero{
-
 text-align:center;
-padding:120px 20px;
-
+padding:120px 20px 60px 20px;
 }
 
 .hero h1{
-
 font-family:'Bebas Neue';
-font-size:90px;
-letter-spacing:5px;
+font-size:100px;
 
 background:linear-gradient(90deg,#1da1ff,#004cff);
 -webkit-background-clip:text;
 color:transparent;
 
+letter-spacing:5px;
 }
 
 .hero p{
-
 opacity:0.8;
 font-size:20px;
-
 }
 
-.search{
+/* SEARCH */
 
+.search{
 text-align:center;
 margin-top:40px;
-
 }
 
 .search input{
-
-width:400px;
+width:420px;
 max-width:90%;
 padding:15px;
 border-radius:30px;
 border:none;
 font-size:16px;
-
 }
 
+/* PROGRAMAS */
+
 .programas{
-
 padding:80px 40px;
-
 }
 
 .titulo{
-
 font-family:'Bebas Neue';
 font-size:60px;
 text-align:center;
-margin-bottom:50px;
-
+margin-bottom:60px;
 }
 
 .grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-
+gap:35px;
 max-width:1200px;
 margin:auto;
-
 }
+
+/* CARD */
 
 .card{
 
 background:#0f1724;
 
 padding:30px;
-border-radius:15px;
 
-box-shadow:0 0 20px rgba(0,170,255,0.2);
+border-radius:18px;
 
-transition:0.3s;
+box-shadow:0 0 25px rgba(0,170,255,0.15);
+
+transition:0.4s;
 
 }
 
 .card:hover{
 
-transform:translateY(-8px);
-box-shadow:0 0 40px rgba(0,170,255,0.5);
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 0 40px rgba(0,170,255,0.6);
 
 }
 
@@ -156,8 +149,20 @@ font-size:32px;
 .card p{
 
 opacity:0.8;
+font-size:15px;
 
 }
+
+/* RATING */
+
+.rating{
+
+color:#ffd700;
+margin-top:5px;
+
+}
+
+/* BUTTON */
 
 .btn{
 
@@ -165,23 +170,27 @@ display:inline-block;
 
 margin-top:15px;
 
-padding:10px 20px;
+padding:10px 22px;
 
 background:#1da1ff;
 
-color:white;
-
 border-radius:20px;
+
+color:white;
 
 text-decoration:none;
 
+font-weight:bold;
+
 }
+
+/* FOOTER */
 
 footer{
 
 text-align:center;
-padding:30px;
-margin-top:60px;
+padding:40px;
+margin-top:80px;
 opacity:0.6;
 
 }
@@ -202,6 +211,7 @@ opacity:0.6;
 
 <a href="#">Início</a>
 <a href="#">Programas</a>
+<a href="#">Projetos</a>
 
 </nav>
 
@@ -209,7 +219,7 @@ opacity:0.6;
 
 <section class="hero">
 
-<h1>JHOW A-I TECHNOLOGY</h1>
+<h1>JHOW A-I</h1>
 
 <p>Tecnologia avançada e softwares inteligentes</p>
 
@@ -231,43 +241,35 @@ opacity:0.6;
 
 <h3>TITAN ULTRA PRO</h3>
 
-<p>
-Sistema avançado de limpeza e otimização do Windows.
-</p>
+<div class="rating">★★★★★</div>
 
-<a class="btn" href="#">
-Download
-</a>
+<p>Sistema avançado de otimização e manutenção do Windows.</p>
+
+<a class="btn" href="#">Download</a>
 
 </div>
-
 
 <div class="card">
 
 <h3>JHOW CLEANER</h3>
 
-<p>
-Ferramenta inteligente para limpeza do sistema.
-</p>
+<div class="rating">★★★★☆</div>
 
-<a class="btn" href="#">
-Download
-</a>
+<p>Ferramenta inteligente para limpeza profunda do sistema.</p>
+
+<a class="btn" href="#">Download</a>
 
 </div>
-
 
 <div class="card">
 
 <h3>JHOW NET BOOST</h3>
 
-<p>
-Acelere sua internet para jogos e downloads.
-</p>
+<div class="rating">★★★★☆</div>
 
-<a class="btn" href="#">
-Download
-</a>
+<p>Acelere sua internet para jogos online e downloads.</p>
+
+<a class="btn" href="#">Download</a>
 
 </div>
 
@@ -283,21 +285,13 @@ JHOW A-I Technology © 2026
 
 <script>
 
-particlesJS("particles-js", {
+particlesJS("particles-js",{
 
 particles:{
-
-number:{value:80},
-
+number:{value:100},
 size:{value:3},
-
 move:{speed:2},
-
-line_linked:{
-enable:true,
-opacity:0.2
-}
-
+line_linked:{enable:true,opacity:0.2}
 }
 
 });
