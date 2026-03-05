@@ -1,39 +1,169 @@
-<script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+<title>JHOW A-I Technology</title>
 
-function resizeCanvas(){
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#0b0f1a;
+color:white;
+font-family:Arial;
+overflow-x:hidden;
 }
 
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
 
-let particles = [];
+header{
+text-align:center;
+padding:80px 20px;
+}
 
-function criarParticulas(){
+.logo{
+font-family:'Bebas Neue', sans-serif;
+font-size:90px;
+letter-spacing:6px;
+color:#00aaff;
+text-shadow:0 0 20px #00aaff;
+}
 
-particles = [];
+.sub{
+font-size:18px;
+opacity:0.8;
+margin-top:10px;
+}
+
+.section{
+text-align:center;
+padding:80px 20px;
+}
+
+.card{
+
+background:#111827;
+padding:40px;
+border-radius:15px;
+display:inline-block;
+max-width:450px;
+box-shadow:0 0 30px rgba(0,170,255,0.2);
+
+}
+
+.card h2{
+font-family:'Bebas Neue';
+letter-spacing:2px;
+font-size:40px;
+}
+
+.btn{
+
+display:inline-block;
+margin-top:20px;
+padding:14px 40px;
+background:#00aaff;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
+
+}
+
+.btn:hover{
+background:#0088cc;
+transform:scale(1.05);
+}
+
+footer{
+
+text-align:center;
+padding:40px;
+opacity:0.6;
+font-size:14px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+
+<div class="logo">JHOW A-I</div>
+
+<div class="sub">
+Tecnologia • Inteligência Artificial • Software
+</div>
+
+</header>
+
+<section class="section">
+
+<div class="card">
+
+<h2>TITAN ULTRA PRO</h2>
+
+<p>
+Sistema inteligente de otimização e manutenção do Windows.
+</p>
+
+<a class="btn" href="#">
+Download em breve
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 JHOW A-I TECHNOLOGY
+
+</footer>
+
+<script>
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+let particles=[];
 
 for(let i=0;i<120;i++){
 
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
-vx:(Math.random()-0.5)*1.2,
-vy:(Math.random()-0.5)*1.2,
+vx:(Math.random()-0.5)*1,
+vy:(Math.random()-0.5)*1,
 size:2
 });
 
 }
 
-}
-
-criarParticulas();
-
-function animar(){
+function animate(){
 
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
@@ -42,8 +172,8 @@ particles.forEach(p=>{
 p.x+=p.vx;
 p.y+=p.vy;
 
-if(p.x<0 || p.x>canvas.width) p.vx*=-1;
-if(p.y<0 || p.y>canvas.height) p.vy*=-1;
+if(p.x<0||p.x>canvas.width)p.vx*=-1;
+if(p.y<0||p.y>canvas.height)p.vy*=-1;
 
 ctx.fillStyle="#00aaff";
 
@@ -53,10 +183,13 @@ ctx.fill();
 
 });
 
-requestAnimationFrame(animar);
+requestAnimationFrame(animate);
 
 }
 
-animar();
+animate();
 
 </script>
+
+</body>
+</html>
