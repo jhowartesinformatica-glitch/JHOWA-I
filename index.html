@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JHOW A-I Technology</title>
+<title>JHOW A-I TECHNOLOGY</title>
 
 <style>
 
@@ -18,8 +17,9 @@ font-family:Segoe UI,Arial;
 }
 
 body{
-background:#050505;
+background:#030303;
 color:white;
+overflow-x:hidden;
 }
 
 /* MENU */
@@ -29,14 +29,18 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:#0a0a0a;
-border-bottom:1px solid #222;
+background:#050505;
+border-bottom:1px solid #111;
+position:sticky;
+top:0;
+z-index:10;
 }
 
 .logo{
 font-size:22px;
 font-weight:bold;
 letter-spacing:1px;
+color:#00aaff;
 }
 
 .menu a{
@@ -53,63 +57,66 @@ color:#00aaff;
 /* HERO */
 
 .hero{
-height:85vh;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:radial-gradient(circle at center,#0a0a0a,#000);
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
 background:linear-gradient(90deg,#00aaff,#0066ff);
 -webkit-background-clip:text;
 color:transparent;
 }
 
 .hero p{
-margin-top:15px;
+margin-top:20px;
 font-size:20px;
 color:#aaa;
 max-width:700px;
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 
 section{
-padding:90px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 h2{
 font-size:40px;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 /* CARDS */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
 }
 
 .card{
-background:#111;
-padding:35px;
+background:#0f0f0f;
+padding:40px;
 border-radius:12px;
-transition:0.3s;
+transition:0.4s;
+border:1px solid #151515;
 }
 
 .card:hover{
-transform:translateY(-8px);
-background:#161616;
+transform:translateY(-10px);
+background:#141414;
+border-color:#00aaff;
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .card p{
@@ -118,36 +125,40 @@ color:#aaa;
 
 /* PROGRAMAS */
 
-.programa{
-background:#0f0f0f;
-border:1px solid #222;
-padding:40px;
+.software{
+background:#0c0c0c;
+border:1px solid #151515;
+padding:50px;
 border-radius:12px;
+max-width:700px;
+margin:auto;
 }
 
 .download{
-margin-top:20px;
 display:inline-block;
-padding:14px 35px;
+margin-top:25px;
+padding:16px 40px;
 background:#0066ff;
 border-radius:8px;
 text-decoration:none;
 color:white;
 font-weight:bold;
+transition:0.3s;
 }
 
 .download:hover{
 background:#0044aa;
+transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
-margin-top:100px;
+margin-top:120px;
 padding:25px;
 text-align:center;
-color:#666;
-border-top:1px solid #222;
+color:#555;
+border-top:1px solid #111;
 }
 
 </style>
@@ -159,7 +170,7 @@ border-top:1px solid #222;
 <nav>
 
 <div class="logo">
-JHOW A-I TECHNOLOGY
+JHOW A-I
 </div>
 
 <div class="menu">
@@ -172,34 +183,34 @@ JHOW A-I TECHNOLOGY
 
 <div class="hero">
 
-<h1>Excelência em Tecnologia</h1>
+<h1>JHOW A-I TECHNOLOGY</h1>
 
 <p>
-Soluções inteligentes em informática, desenvolvimento de sistemas
-e otimização avançada para computadores.
+Tecnologia, inovação e soluções inteligentes para computadores
+e sistemas avançados.
 </p>
 
 </div>
 
 <section id="servicos">
 
-<h2>Serviços</h2>
+<h2>Serviços Tecnológicos</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Manutenção de Computadores</h3>
-<p>Diagnóstico e solução de problemas com alta eficiência.</p>
+<p>Diagnóstico e reparo avançado para computadores e sistemas.</p>
 </div>
 
 <div class="card">
 <h3>Otimização de Windows</h3>
-<p>Melhoria de desempenho e limpeza avançada do sistema.</p>
+<p>Aceleração e limpeza profunda do sistema operacional.</p>
 </div>
 
 <div class="card">
-<h3>Desenvolvimento de Sistemas</h3>
-<p>Criação de ferramentas inteligentes e automações.</p>
+<h3>Desenvolvimento de Software</h3>
+<p>Criação de ferramentas inteligentes e sistemas personalizados.</p>
 </div>
 
 </div>
@@ -208,14 +219,14 @@ e otimização avançada para computadores.
 
 <section id="programas">
 
-<h2>Programas Desenvolvidos</h2>
+<h2>Softwares Desenvolvidos</h2>
 
-<div class="programa">
+<div class="software">
 
 <h3>TITAN ULTRA PRO</h3>
 
 <p>
-Sistema avançado de otimização e diagnóstico do Windows.
+Sistema avançado de diagnóstico e otimização inteligente do Windows.
 </p>
 
 <a class="download" href="#">
@@ -233,5 +244,4 @@ JHOW A-I TECHNOLOGY © 2026
 </footer>
 
 </body>
-
 </html>
