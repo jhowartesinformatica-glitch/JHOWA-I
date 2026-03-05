@@ -17,9 +17,31 @@ font-family:Segoe UI,Arial;
 }
 
 body{
-background:#030303;
+background:#020202;
 color:white;
 overflow-x:hidden;
+}
+
+/* FUNDO ANIMADO */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#00aaff22,#000000);
+animation:movebg 15s linear infinite;
+z-index:-1;
+}
+
+@keyframes movebg{
+
+0%{transform:translate(0,0)}
+
+50%{transform:translate(-200px,-200px)}
+
+100%{transform:translate(0,0)}
+
 }
 
 /* MENU */
@@ -37,9 +59,8 @@ z-index:10;
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:bold;
-letter-spacing:1px;
 color:#00aaff;
 }
 
@@ -63,12 +84,10 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
-background:radial-gradient(circle at center,#0a0a0a,#000);
 }
 
 .hero h1{
-font-size:70px;
+font-size:75px;
 background:linear-gradient(90deg,#00aaff,#0066ff);
 -webkit-background-clip:text;
 color:transparent;
@@ -76,20 +95,20 @@ color:transparent;
 
 .hero p{
 margin-top:20px;
-font-size:20px;
 color:#aaa;
+font-size:20px;
 max-width:700px;
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 
 section{
-padding:100px 10%;
+padding:110px 10%;
 text-align:center;
 }
 
 h2{
-font-size:40px;
+font-size:42px;
 margin-bottom:60px;
 }
 
@@ -102,17 +121,17 @@ gap:35px;
 }
 
 .card{
-background:#0f0f0f;
+background:#0c0c0c;
 padding:40px;
 border-radius:12px;
+border:1px solid #111;
 transition:0.4s;
-border:1px solid #151515;
 }
 
 .card:hover{
-transform:translateY(-10px);
-background:#141414;
+transform:translateY(-12px);
 border-color:#00aaff;
+background:#101010;
 }
 
 .card h3{
@@ -123,10 +142,10 @@ margin-bottom:12px;
 color:#aaa;
 }
 
-/* PROGRAMAS */
+/* SOFTWARE */
 
 .software{
-background:#0c0c0c;
+background:#0a0a0a;
 border:1px solid #151515;
 padding:50px;
 border-radius:12px;
@@ -137,7 +156,7 @@ margin:auto;
 .download{
 display:inline-block;
 margin-top:25px;
-padding:16px 40px;
+padding:16px 45px;
 background:#0066ff;
 border-radius:8px;
 text-decoration:none;
@@ -186,31 +205,31 @@ JHOW A-I
 <h1>JHOW A-I TECHNOLOGY</h1>
 
 <p>
-Tecnologia, inovação e soluções inteligentes para computadores
-e sistemas avançados.
+Tecnologia avançada, inovação digital e desenvolvimento
+de sistemas inteligentes.
 </p>
 
 </div>
 
 <section id="servicos">
 
-<h2>Serviços Tecnológicos</h2>
+<h2>Serviços</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Manutenção de Computadores</h3>
-<p>Diagnóstico e reparo avançado para computadores e sistemas.</p>
+<p>Diagnóstico avançado e reparo profissional.</p>
 </div>
 
 <div class="card">
 <h3>Otimização de Windows</h3>
-<p>Aceleração e limpeza profunda do sistema operacional.</p>
+<p>Melhoria de desempenho e limpeza profunda do sistema.</p>
 </div>
 
 <div class="card">
 <h3>Desenvolvimento de Software</h3>
-<p>Criação de ferramentas inteligentes e sistemas personalizados.</p>
+<p>Criação de ferramentas e sistemas inteligentes.</p>
 </div>
 
 </div>
@@ -226,7 +245,7 @@ e sistemas avançados.
 <h3>TITAN ULTRA PRO</h3>
 
 <p>
-Sistema avançado de diagnóstico e otimização inteligente do Windows.
+Sistema inteligente de diagnóstico e otimização do Windows.
 </p>
 
 <a class="download" href="#">
