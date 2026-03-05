@@ -6,129 +6,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JHOW A-I</title>
+<title>JHOW A-I System</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
 
 body{
 margin:0;
-background:#050b14;
-font-family:Arial;
-color:white;
+background:black;
+color:#00ff9c;
+font-family:monospace;
 overflow:hidden;
 }
 
-#particles-js{
+/* TELA BOOT */
+
+#boot{
+
 position:fixed;
 width:100%;
 height:100%;
-z-index:-1;
+
+background:black;
+
+padding:40px;
+
 }
 
-/* CENTRAL */
+.line{
+margin:5px 0;
+opacity:0;
+animation:show 1s forwards;
+}
 
-.container{
+@keyframes show{
+to{opacity:1;}
+}
 
+/* PROGRESS BAR */
+
+.progress{
+
+width:400px;
+height:10px;
+border:1px solid #00ff9c;
+margin-top:20px;
+
+}
+
+.bar{
+
+height:100%;
+width:0%;
+background:#00ff9c;
+
+animation:load 5s linear forwards;
+
+}
+
+@keyframes load{
+
+to{width:100%;}
+
+}
+
+/* SITE */
+
+#site{
+
+display:none;
 height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
 
-}
+background:linear-gradient(120deg,#020617,#020d1f);
 
-/* JANELA */
+color:white;
 
-.window{
-
-width:900px;
-background:#0f1724;
-border-radius:10px;
-box-shadow:0 0 40px rgba(0,170,255,0.4);
-
-}
-
-/* BARRA */
-
-.titlebar{
-
-background:#020617;
-padding:10px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-border-top-left-radius:10px;
-border-top-right-radius:10px;
-
-}
-
-.buttons{
-
-display:flex;
-gap:8px;
-
-}
-
-.btn{
-
-width:12px;
-height:12px;
-border-radius:50%;
-
-}
-
-.red{background:#ff5f56;}
-.yellow{background:#ffbd2e;}
-.green{background:#27c93f;}
-
-/* CONTEUDO */
-
-.content{
-
-padding:80px;
 text-align:center;
+
+padding-top:150px;
+
+font-family:Arial;
 
 }
 
 .logo{
 
 font-family:'Bebas Neue';
-font-size:90px;
+
+font-size:120px;
 
 background:linear-gradient(90deg,#1da1ff,#004cff);
+
 -webkit-background-clip:text;
+
 color:transparent;
-
-}
-
-.subtitle{
-
-opacity:0.8;
-font-size:20px;
-
-}
-
-.enter{
-
-margin-top:40px;
-
-padding:12px 30px;
-
-border:none;
-
-background:#1da1ff;
-
-color:white;
-
-font-size:18px;
-
-border-radius:25px;
-
-cursor:pointer;
 
 }
 
@@ -138,56 +110,42 @@ cursor:pointer;
 
 <body>
 
-<div id="particles-js"></div>
+<div id="boot">
 
-<div class="container">
+<div class="line" style="animation-delay:0s">Inicializando núcleo JHOW A-I...</div>
 
-<div class="window">
+<div class="line" style="animation-delay:1s">Carregando módulos de inteligência...</div>
 
-<div class="titlebar">
+<div class="line" style="animation-delay:2s">Conectando rede neural...</div>
 
-<div class="buttons">
+<div class="line" style="animation-delay:3s">Verificando sistema...</div>
 
-<div class="btn red"></div>
-<div class="btn yellow"></div>
-<div class="btn green"></div>
+<div class="line" style="animation-delay:4s">Sistema pronto.</div>
+
+<div class="progress">
+<div class="bar"></div>
+</div>
 
 </div>
 
-<div>JHOW A-I SYSTEM</div>
 
-</div>
-
-<div class="content">
+<div id="site">
 
 <div class="logo">JHOW A-I</div>
 
-<p class="subtitle">
-Tecnologia avançada e desenvolvimento de softwares inteligentes
-</p>
-
-<button class="enter">
-ENTRAR NO SISTEMA
-</button>
+<p>Tecnologia avançada e softwares inteligentes</p>
 
 </div>
 
-</div>
-
-</div>
 
 <script>
 
-particlesJS("particles-js",{
+setTimeout(function(){
 
-particles:{
-number:{value:90},
-size:{value:3},
-move:{speed:2},
-line_linked:{enable:true,opacity:0.2}
-}
+document.getElementById("boot").style.display="none";
+document.getElementById("site").style.display="block";
 
-});
+},5500);
 
 </script>
 
