@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <title>JHOW A-I Technology</title>
@@ -9,38 +9,57 @@
 <style>
 
 body{
-background:#0b0b0b;
+margin:0;
+background:#050505;
 color:white;
 font-family:Arial;
-margin:0;
 text-align:center;
 }
 
 header{
-padding:40px;
-font-family:'Bebas Neue',sans-serif;
-font-size:60px;
-letter-spacing:3px;
+padding:30px;
+font-family:'Bebas Neue', sans-serif;
+font-size:28px;
+letter-spacing:2px;
 }
 
-.sub{
-color:#888;
-margin-top:-20px;
+.hero{
+margin-top:80px;
 }
 
-.container{
+.hero h1{
+font-family:'Bebas Neue', sans-serif;
+font-size:90px;
+color:#3a7bff;
+}
+
+.hero p{
+color:#bbb;
+font-size:18px;
+}
+
+.programas{
+margin-top:120px;
+}
+
+.programas h2{
+font-family:'Bebas Neue', sans-serif;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.cards{
 display:flex;
 justify-content:center;
+gap:40px;
 flex-wrap:wrap;
-gap:30px;
-margin-top:60px;
 }
 
 .card{
-background:#141414;
-padding:25px;
-width:250px;
-border-radius:12px;
+background:#111;
+padding:30px;
+border-radius:15px;
+width:260px;
 box-shadow:0 0 20px rgba(0,0,0,0.6);
 transition:0.3s;
 }
@@ -49,19 +68,33 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+.card h3{
+font-family:'Bebas Neue', sans-serif;
+font-size:28px;
+}
+
+.card p{
+color:#aaa;
+}
+
 .btn{
-margin-top:20px;
-background:#00ff88;
+margin-top:15px;
+padding:12px 25px;
 border:none;
-padding:10px 20px;
+background:#3cff78;
 border-radius:6px;
 cursor:pointer;
 font-weight:bold;
 }
 
+.btn:hover{
+background:#28c75a;
+}
+
 footer{
 margin-top:100px;
-color:#555;
+color:#777;
+padding:20px;
 }
 
 </style>
@@ -69,33 +102,56 @@ color:#555;
 
 <body>
 
-<header>JHOW A-I</header>
-<div class="sub">Tecnologia e Inteligência Digital</div>
+<header>
+JHOW A-I TECHNOLOGY
+</header>
 
-<div class="container">
+<div class="hero">
+
+<h1>JHOW A-I</h1>
+
+<p>Tecnologia e Inteligência Digital</p>
+
+</div>
+
+<div class="programas">
+
+<h2>PROGRAMAS</h2>
+
+<div class="cards">
 
 <div class="card">
-<h2>TITAN ULTRA PRO</h2>
+<h3>TITAN ULTRA PRO</h3>
 <p>Ferramenta profissional de otimização do Windows.</p>
+<a href="#">
 <button class="btn">Download</button>
+</a>
 </div>
 
 <div class="card">
-<h2>JHOW CLEANER</h2>
+<h3>JHOW CLEANER</h3>
 <p>Limpeza profunda e rápida do sistema.</p>
+<a href="#">
 <button class="btn">Download</button>
+</a>
 </div>
 
 <div class="card">
-<h2>EM BREVE</h2>
+<h3>EM BREVE</h3>
 <p>Novo software em desenvolvimento.</p>
+<a href="#">
 <button class="btn">Download</button>
+</a>
+</div>
+
 </div>
 
 </div>
 
 <footer>
+
 © 2026 JHOW A-I Technology
+
 </footer>
 
 </body>
