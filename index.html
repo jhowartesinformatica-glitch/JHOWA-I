@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JHOW A-I Technology</title>
+<title>JHOW A-I</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
@@ -17,9 +17,9 @@
 body{
 margin:0;
 background:#050b14;
-color:white;
 font-family:Arial;
-overflow-x:hidden;
+color:white;
+overflow:hidden;
 }
 
 #particles-js{
@@ -29,169 +29,106 @@ height:100%;
 z-index:-1;
 }
 
-/* NAVBAR */
+/* CENTRAL */
 
-header{
+.container{
+
+height:100vh;
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-background:#000000c7;
-backdrop-filter:blur(10px);
+justify-content:center;
+
+}
+
+/* JANELA */
+
+.window{
+
+width:900px;
+background:#0f1724;
+border-radius:10px;
+box-shadow:0 0 40px rgba(0,170,255,0.4);
+
+}
+
+/* BARRA */
+
+.titlebar{
+
+background:#020617;
+padding:10px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:8px;
+
+}
+
+.btn{
+
+width:12px;
+height:12px;
+border-radius:50%;
+
+}
+
+.red{background:#ff5f56;}
+.yellow{background:#ffbd2e;}
+.green{background:#27c93f;}
+
+/* CONTEUDO */
+
+.content{
+
+padding:80px;
+text-align:center;
+
 }
 
 .logo{
+
 font-family:'Bebas Neue';
-font-size:40px;
-letter-spacing:3px;
-color:#2aa9ff;
-}
-
-nav a{
-margin-left:30px;
-text-decoration:none;
-color:white;
-font-size:18px;
-opacity:0.8;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px 60px 20px;
-}
-
-.hero h1{
-font-family:'Bebas Neue';
-font-size:100px;
+font-size:90px;
 
 background:linear-gradient(90deg,#1da1ff,#004cff);
 -webkit-background-clip:text;
 color:transparent;
 
-letter-spacing:5px;
 }
 
-.hero p{
+.subtitle{
+
 opacity:0.8;
 font-size:20px;
+
 }
 
-/* SEARCH */
+.enter{
 
-.search{
-text-align:center;
 margin-top:40px;
-}
 
-.search input{
-width:420px;
-max-width:90%;
-padding:15px;
-border-radius:30px;
+padding:12px 30px;
+
 border:none;
-font-size:16px;
-}
-
-/* PROGRAMAS */
-
-.programas{
-padding:80px 40px;
-}
-
-.titulo{
-font-family:'Bebas Neue';
-font-size:60px;
-text-align:center;
-margin-bottom:60px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
-max-width:1200px;
-margin:auto;
-}
-
-/* CARD */
-
-.card{
-
-background:#0f1724;
-
-padding:30px;
-
-border-radius:18px;
-
-box-shadow:0 0 25px rgba(0,170,255,0.15);
-
-transition:0.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px) scale(1.03);
-
-box-shadow:0 0 40px rgba(0,170,255,0.6);
-
-}
-
-.card h3{
-
-font-family:'Bebas Neue';
-font-size:32px;
-
-}
-
-.card p{
-
-opacity:0.8;
-font-size:15px;
-
-}
-
-/* RATING */
-
-.rating{
-
-color:#ffd700;
-margin-top:5px;
-
-}
-
-/* BUTTON */
-
-.btn{
-
-display:inline-block;
-
-margin-top:15px;
-
-padding:10px 22px;
 
 background:#1da1ff;
 
-border-radius:20px;
-
 color:white;
 
-text-decoration:none;
+font-size:18px;
 
-font-weight:bold;
+border-radius:25px;
 
-}
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-padding:40px;
-margin-top:80px;
-opacity:0.6;
+cursor:pointer;
 
 }
 
@@ -203,114 +140,52 @@ opacity:0.6;
 
 <div id="particles-js"></div>
 
-<header>
+<div class="container">
+
+<div class="window">
+
+<div class="titlebar">
+
+<div class="buttons">
+
+<div class="btn red"></div>
+<div class="btn yellow"></div>
+<div class="btn green"></div>
+
+</div>
+
+<div>JHOW A-I SYSTEM</div>
+
+</div>
+
+<div class="content">
 
 <div class="logo">JHOW A-I</div>
 
-<nav>
+<p class="subtitle">
+Tecnologia avançada e desenvolvimento de softwares inteligentes
+</p>
 
-<a href="#">Início</a>
-<a href="#">Programas</a>
-<a href="#">Projetos</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>JHOW A-I</h1>
-
-<p>Tecnologia avançada e softwares inteligentes</p>
-
-</section>
-
-<div class="search">
-
-<input type="text" id="search" placeholder="Buscar programa...">
-
-</div>
-
-<section class="programas">
-
-<h2 class="titulo">PROGRAMAS</h2>
-
-<div class="grid" id="programList">
-
-<div class="card">
-
-<h3>TITAN ULTRA PRO</h3>
-
-<div class="rating">★★★★★</div>
-
-<p>Sistema avançado de otimização e manutenção do Windows.</p>
-
-<a class="btn" href="#">Download</a>
-
-</div>
-
-<div class="card">
-
-<h3>JHOW CLEANER</h3>
-
-<div class="rating">★★★★☆</div>
-
-<p>Ferramenta inteligente para limpeza profunda do sistema.</p>
-
-<a class="btn" href="#">Download</a>
-
-</div>
-
-<div class="card">
-
-<h3>JHOW NET BOOST</h3>
-
-<div class="rating">★★★★☆</div>
-
-<p>Acelere sua internet para jogos online e downloads.</p>
-
-<a class="btn" href="#">Download</a>
+<button class="enter">
+ENTRAR NO SISTEMA
+</button>
 
 </div>
 
 </div>
 
-</section>
-
-<footer>
-
-JHOW A-I Technology © 2026
-
-</footer>
+</div>
 
 <script>
 
 particlesJS("particles-js",{
 
 particles:{
-number:{value:100},
+number:{value:90},
 size:{value:3},
 move:{speed:2},
 line_linked:{enable:true,opacity:0.2}
 }
-
-});
-
-const search=document.getElementById("search");
-
-search.addEventListener("keyup",function(){
-
-let filter=search.value.toLowerCase();
-
-let cards=document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-let text=card.innerText.toLowerCase();
-
-card.style.display=text.includes(filter)?"block":"none";
-
-});
 
 });
 
